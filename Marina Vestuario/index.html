@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Marina Vestuario</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">⚓ Marina Vestuario</div>
+
+<div class="nav-links">
+<a href="#" onclick="mostrarInicio()">Inicio</a>
+<a href="#" onclick="mostrarMenu()">Vestuario</a>
+<a href="#" onclick="mostrarCarrito()">🛒 Carrito</a>
+<a href="#" onclick="mostrarHistorial()">Historial</a>
+<a href="#" onclick="cerrarSesion()">Cerrar sesión</a>
+</div>
+
+</nav>
+
+<!-- INICIO -->
+
+<section id="inicio">
+
+<div class="hero">
+
+<h1>⚓ Bienvenido a Marina Vestuario</h1>
+
+<p>
+Somos una tienda especializada en el alquiler de vestuario naval para eventos,
+fiestas temáticas, teatro y producciones audiovisuales.
+</p>
+
+<div class="info-cards">
+
+<div class="info">
+<h3>⚓ Calidad</h3>
+<p>Uniformes navales profesionales.</p>
+</div>
+
+<div class="info">
+<h3>🚢 Experiencia</h3>
+<p>Más de 10 años alquilando vestuario.</p>
+</div>
+
+<div class="info">
+<h3>⭐ Clientes felices</h3>
+<p>Cientos de eventos exitosos.</p>
+</div>
+
+</div>
+
+<button onclick="mostrarMenu()" class="btn-principal">
+Ver Vestuario
+</button>
+
+</div>
+
+</section>
+
+<!-- LOGIN -->
+
+<section id="login" class="oculto">
+
+<div class="form">
+
+<h2>Iniciar Sesión</h2>
+
+<input type="email" id="loginEmail" placeholder="Correo">
+<input type="password" id="loginPassword" placeholder="Contraseña">
+
+<button onclick="login()">Entrar</button>
+
+<p>No tienes cuenta?
+<a href="#" onclick="mostrarRegistro()">Regístrate</a>
+</p>
+
+</div>
+
+</section>
+
+<!-- REGISTRO -->
+
+<section id="registro" class="oculto">
+
+<div class="form">
+
+<h2>Registro</h2>
+
+<input type="text" id="nombre" placeholder="Nombre">
+<input type="email" id="email" placeholder="Correo">
+<input type="password" id="password" placeholder="Contraseña">
+
+<button onclick="registrar()">Registrarse</button>
+
+<p>¿Ya tienes cuenta?
+<a href="#" onclick="mostrarLogin()">Inicia sesión</a>
+</p>
+
+</div>
+
+</section>
+
+<!-- VESTUARIO -->
+
+<section id="menu" class="oculto">
+
+<h2>⚓ Vestuario Naval Disponible</h2>
+
+<p id="bienvenida"></p>
+
+<div class="cards">
+
+<div class="card">
+
+<video class="video-uniforme" autoplay muted loop>
+<source src="/capitan.mp4" type="video/mp4">
+</video>
+
+<h3>Capitán Naval</h3>
+
+<p>₡15000 por día</p>
+
+<input type="date" id="fecha1">
+
+<button onclick="agregarCarrito('Capitán Naval','fecha1')">
+Agregar al carrito
+</button>
+
+</div>
+
+<div class="card">
+
+<video class="video-uniforme" autoplay muted loop>
+<source src="/marinero.mp4" type="video/mp4">
+</video>
+
+<h3>Marinero Profesional</h3>
+
+<p>₡10000 por día</p>
+
+<input type="date" id="fecha2">
+
+<button onclick="agregarCarrito('Marinero','fecha2')">
+Agregar al carrito
+</button>
+
+</div>
+
+<div class="card">
+
+<video class="video-uniforme" autoplay muted loop>
+<source src="/almirante.mp4" type="video/mp4">
+</video>
+
+<h3>Almirante de Flota</h3>
+
+<p>₡20000 por día</p>
+
+<input type="date" id="fecha3">
+
+<button onclick="agregarCarrito('Almirante','fecha3')">
+Agregar al carrito
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CARRITO -->
+
+<section id="carrito" class="oculto">
+
+<h2>🛒 Carrito de Reservas</h2>
+
+<ul id="listaCarrito"></ul>
+
+<button onclick="confirmarReservas()">
+Confirmar Reservas
+</button>
+
+</section>
+
+<!-- HISTORIAL -->
+
+<section id="historial" class="oculto">
+
+<h2>📜 Historial de Reservas</h2>
+
+<ul id="listaHistorial"></ul>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
